@@ -1,0 +1,18 @@
+# This workflow is for syntax check
+name: Auto Linter
+on:
+  push:
+    paths: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Clone
+        uses: actions/checkout@v7
+      
+      - name: Install Linter
+        run: pip install ruff
+
+      - name: Run Linter
+        run: ruff check .
