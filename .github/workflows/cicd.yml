@@ -1,0 +1,25 @@
+name: CICD
+on:
+  push:
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Clone
+        run: echo "Cloning the code"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Build
+        run: echo "Building the code"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Test
+        run: echo "Testing the code"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Deployment
+        run: echo "Deploying the code"
