@@ -1,0 +1,11 @@
+name: Demo
+on:
+  workflow_dispatch:
+
+jobs:
+  print-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: printing hello 
+        run: echo "Hello World!"
+        
